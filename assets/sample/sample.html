@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>示例页面</title>
+</head>
+<!-- 之后的指定的样式如果和前面指定的样式有相同的地方，会覆盖之前指定的样式 -->
+<link rel="stylesheet" href="../css/sample.css">
+<!-- 介绍盒模型的CSS，通过media属性指定其要在有屏幕且屏幕宽度至少601像素的设备上生效 -->
+<link rel="stylesheet" href="../css/box.css" media="screen and (min-device-width:601px)">
+<!-- 这个CSS用于在移动设备生效，在内部采用@media规则指定了适用宽度 -->
+<link rel="stylesheet" href="../css/box-mobile.css">
+
+<body>
+    <h1 class="yellowclass blackclass pinkclass">这是一个示例页面，结合HTML与CSS展示一个页面</h1>
+    <h2 class="redclass">在CSS文件中使用选择器为不同元素设置样式</h2>
+    <p class="redclass">这是一段文字，<em>斜体部分的内容我想单独设置样式</em></p>
+    <div id=box>
+        <h2>这些元素被放在一个div中,用来展示盒模型</h2>
+        <p><a href="https://colasaikou.com/2020/07/12/HTML-2.html">点此回到文章,通过这个链接展示伪类</a></p>
+        <p>显而易见，这是<span class="important">几个汉字</span></p>
+    </div>
+</body>
+
+</html>
