@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        p.floatclass {
+            background-color: aqua;
+        }
+
+        blockquote {
+            color: #828282;
+            border-left: 4px solid #e8e8e8;
+            padding-left: 15px;
+            font-size: 18px;
+            letter-spacing: -1px;
+            font-style: italic
+        }
+    </style>
+</head>
+
+<body>
+    <h1>使用float浮动元素</h1>
+    <h2>先观察不浮动的情况</h2>
+    <p class="floatclass">这是一个段落，我们将其背景设置为青色,用它来展示float的过程</p>
+    <p class="fixedclass"></p>
+    <h2>为将要浮动的元素设置一个宽度，让其不是占据整行</h2>
+    <p class="floatclass" style="width: 100px;">这是一个段落，我们将其背景设置为青色,用它来展示float的过程</p>
+    <p class="fixedclass"></p>
+    <h2>使用float属性让其浮动到右边</h2>
+    <p class="floatclass" style="width: 100px; float: right; margin: 0px;">这是一个段落，我们将其背景设置为青色,用它来展示float的过程</p>
+    <p class="fixedclass"></p>
+    <p><strong>总结：当一个元素浮动之后，其会从正常的流中被忽略，块级元素会直接穿过它，不会进行换行，但是内联元素在遇到它时会围绕着它进行布局，值得注意的是，这里浮动的元素是写在不动的段落之前的，但是从视觉上来看，其是在它之后的，这是因为我们设置其靠右浮动的缘故</strong>
+    </p>
+    <blockquote>
+    </blockquote>
+</body>
+<script>
+    window.onload = () => {
+        let fixedElements = document.getElementsByClassName("fixedclass");
+        for (let index = 0; index < fixedElements.length; index++) {
+            const element = fixedElements[index];
+            element.innerHTML = `这是一个不动的段落，我们让它尽可能${'长'.repeat(200)}，从而让其内容环绕在浮动的元素周围`;
+        }
+    }
+</script>
+
+</html>
