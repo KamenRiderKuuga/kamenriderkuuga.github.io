@@ -2,7 +2,7 @@ div.pagehead {
     background-color: #7d8b8d;
 }
 
-#topbar>ul {
+nav>ul {
     font-size: large;
     padding-left: 10px;
     background-color: rgb(22, 159, 230);
@@ -20,7 +20,7 @@ div.pagehead {
     margin-right: 120px;
 }
 
-#sidebar {
+aside {
     width: 100px;
     float: right;
 }

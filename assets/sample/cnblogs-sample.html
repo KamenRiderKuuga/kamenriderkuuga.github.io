@@ -10,15 +10,15 @@
 
 <body>
     <!-- 个性签名 -->
-    <div class="pagehead" id="sign">
+    <header class="pagehead" id="sign">
         驾一叶之扁舟 举匏樽以相属
         <br>
         寄蜉蝣于天地，渺沧海之一粟。哀吾生之须臾，羡长江之无穷。
         <br>
         挟飞仙以遨游，抱明月而长终。知不可乎骤得，托遗响于悲风。
         <h1>我的博客</h1>
-    </div>
-    <div id="topbar">
+    </header>
+    <nav id="topbar">
         <ul>
             <li>博客园</li>
             <li>首页</li>
@@ -26,33 +26,32 @@
             <li>订阅</li>
             <li>管理</li>
         </ul>
-    </div>
-    <div id="maincontent">
-        <div id=sidebar>
+    </nav>
+    <section id="maincontent">
+        <aside id=sidebar>
             <div id=sidebarOne>
             </div>
             <div id=sidebarTwo>
             </div>
-        </div>
-        <div id="main">
-
-        </div>
-    </div>
-    <div id="footer">
+        </aside>
+        <section id="main">
+        </section>
+    </section>
+    <footer id="footer">
         <p>这是网页最底部的块</p>
-    </div>
-    <div id="rocket">
-        这是小火箭
-    </div>
+        </div>
+        <div id="rocket">
+            这是小火箭
+        </div>
 </body>
 <script>
     window.onload = () => {
-        let mainElement = document.getElementById("main");
+        let mainarticle = document.getElementById("mainarticle");
         let sidebarOneElement = document.getElementById("sidebarOne");
         let sidebarTwoElement = document.getElementById("sidebarTwo");
 
         for (let index = 0; index <= 1000; index++) {
-            mainElement.innerHTML += "这是主要内容";
+            mainarticle.innerHTML += "这是主要内容";
         }
 
         for (let index = 0; index <= 50; index++) {
