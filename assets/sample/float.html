@@ -18,6 +18,11 @@
             letter-spacing: -1px;
             font-style: italic
         }
+
+        #allcontent {
+            width: 800px;
+            background-color: coral;
+        }
     </style>
 </head>
 
@@ -48,6 +53,18 @@
     </div>
     <div style="border:solid 1px; background-color: pink; clear:right;">
         通过设置clear属性，我们让这个元素的右边不允许有浮动内容，元素就自动被放置到浮动内容下方了
+    </div>
+    <h2>冻结布局</h2>
+    <div id="allcontent">
+        <p class="floatclass" style="float: right; width: 200px;"></p>
+        <p class="fixedclass" style="margin-right: 210px;"></p>
+        <blockquote>可以看到，无论浏览器怎么调整，这两个区域的大小都固定不变</blockquote>
+    </div>
+    <h2>凝胶布局</h2>
+    <div id="allcontent" style="margin-left: auto; margin-right: auto;">
+        <p class="floatclass" style="float: right; width: 200px;"></p>
+        <p class="fixedclass" style="margin-right: 210px;"></p>
+        <blockquote>凝胶布局在冻结布局的基础上设置了左右外边距为auto，其依然锁定页面中内容区的宽度，不过会将它在浏览器中居中</blockquote>
     </div>
 </body>
 <script>

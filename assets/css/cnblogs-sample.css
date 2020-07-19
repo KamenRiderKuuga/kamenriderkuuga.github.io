@@ -1,0 +1,56 @@
+div.pagehead {
+    background-color: #7d8b8d;
+}
+
+#topbar>ul {
+    font-size: large;
+    padding-left: 10px;
+    background-color: rgb(22, 159, 230);
+    height: 60px;
+}
+
+#maincontent {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main {
+    background-color: aqua;
+    margin-right: 120px;
+}
+
+#sidebar {
+    width: 100px;
+    float: right;
+}
+
+#sidebarOne {
+    margin: 20px 0px;
+    background-color: coral;
+}
+
+#sidebarTwo {
+    margin: 20px 0px;
+    background-color: pink;
+}
+
+#topbar>ul>li {
+    display: inline-block;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#footer {
+    background-color: powderblue;
+    clear: right;
+}
+
+#rocket {
+    position: fixed;
+    width: 50px;
+    height: 100px;
+    right: 30px;
+    bottom: 30px;
+    background-color: gray;
+}
