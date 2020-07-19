@@ -25,6 +25,24 @@ aside {
     float: right;
 }
 
+/* 这里对较窄的屏幕做了特殊处理，像博客园一样把侧边栏移到下面去了 */
+
+@media screen and (max-device-width:800px) {
+    #maincontent {
+        width: 90vw;
+        display: flex;
+        flex-flow: column;
+    }
+    aside {
+        float: none;
+        order: 2;
+    }
+    #main {
+        order: 1;
+        margin-right: 0px;
+    }
+}
+
 #sidebarOne {
     margin: 20px 0px;
     background-color: coral;
