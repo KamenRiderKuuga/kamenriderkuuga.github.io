@@ -1,50 +1,57 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+title: HANABI的技术博客
+author:
+  name: HANABI
+  email: narancia86@outlook/com
+description: > # this means to ignore newlines until "show_excerpts:"
+  一个简单的技术博客，分享学习心得
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: HANABI's Blog
-author: HANABI
-email: narancia86@outlook.com
-description: >- # this means to ignore newlines until "baseurl:"
-  From Manager to Developer
-baseurl: "" # the subpath of your site, e.g. /blog
-url: http://www.colasaikou.com
-# twitter_username: jekyllrb
-github_username:  GadHao
-repository: GadHao/gadhao.github.io
-permalink: /:year-:month-:day-:title
-logo: "http://www.natalyakosenko.com/assets/logo.png"
+show_excerpts: false # set to true to show excerpts on the homepage
 
-disqus:
-    shortname: HANABI
+# Minima date format
+# refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%b %-d, %Y"
+
+  # generate social links in footer
+  social_links:
+    github:  GadHao
+    # devto: jekyll
+    # dribbble: jekyll
+    # facebook: jekyll
+    # flickr:   jekyll
+    # instagram: jekyll
+    # linkedin: jekyll
+    # pinterest: jekyll
+    # youtube: jekyll
+    # youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
+    # youtube_channel_name: CloudCannon
+    # telegram: jekyll
+    # googleplus: +jekyll
+    # microdotblog: jekyll
+    # keybase: jekyll
+
+    # Mastodon instances
+    # mastodon:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+    # GitLab instances
+    # gitlab:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
+
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.md
 
 # Build settings
-markdown: kramdown
-theme: jekyll-theme-cayman
-plugins:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-redirect-from
+theme: minima
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag
