@@ -24,7 +24,7 @@ url: http://www.colasaikou.com
 github_username:  GadHao
 repository: GadHao/gadhao.github.io
 permalink: /:year-:month-:day-:title
-# logo: "http://www.natalyakosenko.com/assets/logo.png"
+logo: "http://www.natalyakosenko.com/assets/logo.png"
 
 disqus:
     shortname: HANABI
