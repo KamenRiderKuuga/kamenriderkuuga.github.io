@@ -61,14 +61,14 @@ linux> gcc -o hello hello.c
 以GCC编译器驱动程序[^2]编译过程为例，整个编译分为四个阶段，而执行这四个阶段的程序共同构成了*编译系统(complilation system)*
 
 <div class="mermaid">
-	A>"hello.c<br/>源程序(文本)"]-->B["预处理器<br/>(cpp)"]
-	B--"hello.i<br/>修改了的源程序(文本)"-->C["编译器<br/>(ccl)"]
-	C--"hello.s<br/>汇编程序(文本)"-->D["汇编器<br/>(as)"]
-	D--"hello.o<br/>可重定位目标程序(二进制)"-->E["链接器<br/>(ld)"]
-	subgraph 建立链接
-    Id1((printf.o))-->E
-    end
-	E-->F("可执行目标程序<br/>(二进制)")
+	A>"hello.c<br/>源程序(文本)"]-->B["预处理器<br/>(cpp)"];
+	B--"hello.i<br/>修改了的源程序(文本)"-->C["编译器<br/>(ccl)"];
+	C--"hello.s<br/>汇编程序(文本)"-->D["汇编器<br/>(as)"];
+	D--"hello.o<br/>可重定位目标程序(二进制)"-->E["链接器<br/>(ld)"];
+	subgraph 建立链接;
+    Id1((printf.o))-->E;
+    end;
+	E-->F("可执行目标程序<br/>(二进制)");
 </div>
 
 可以看到，四个阶段分别为：
