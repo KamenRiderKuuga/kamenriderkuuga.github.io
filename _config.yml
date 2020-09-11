@@ -52,6 +52,9 @@ minima:
 # Build settings
 theme: minima
 
+mermaid:
+  src: '/assets/js/mermaid.js'
+
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
