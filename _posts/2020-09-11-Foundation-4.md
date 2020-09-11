@@ -60,7 +60,7 @@ linux> gcc -o hello hello.c
 
 以GCC编译器驱动程序[^2]编译过程为例，整个编译分为四个阶段，而执行这四个阶段的程序共同构成了*编译系统(complilation system)*
 
-<div class="mermaid" style="margin:auto;">
+<div class="mermaid">
 graph LR;
 	A>"hello.c<br/>源程序(文本)"]-->B["预处理器<br/>(cpp)"];
 	B--"hello.i<br/>修改了的源程序(文本)"-->C["编译器<br/>(ccl)"];
