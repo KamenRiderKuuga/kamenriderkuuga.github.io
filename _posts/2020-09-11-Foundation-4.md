@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '深入理解计算机系统 - 计算机系统漫游'
-date: 2020-07-20
+date: 2020-09-11
 author: HANABI
 color: rgb(54,59,64)
 tags: 地基系列 计算机系统
