@@ -102,7 +102,7 @@ tags: 地基系列 计算机系统
 
 看这段代码：
 
-```C
+```c
 # include <stdio.h>
 typedef unsigned char *byte_pointer;
 

@@ -22,7 +22,7 @@ permalink: /notebook/
 
 看这段代码：
 
-```C
+```c
 # include <stdio.h>
 typedef unsigned char *byte_pointer;
 
