@@ -1,16 +1,11 @@
 ---
-layout: page
-title: 每日学习笔记
-permalink: /notebook/
+layout: post
+title: '浅谈WebAssembly'
+date: 2020-09-21
+author: HANABI
+color: rgb(54,59,64)
+tags: WebAssembly
 ---
-
-> 每日的学习笔记，主要用来发布前一天学习的所有理论知识，即每天早上8点30之后可以随时在这里看到之前的一天学习的内容有哪些，也可以看[提交记录](https://github.com/GadHao/gadhao.github.io/commits/master)追溯之前提交过的内容
-
-## 总结[2020.09.20]
-
-> 对周末的知识分享花了比较多的时间做准备，加上这周有点不适(真的要多注重运动和饮食了)，这里就把周末分享的内容放到这里，从周一开始还是恢复理论知识的学习
-
-## 浅谈WebAssembly
 
 > WebAssembly作为新的前端标准之一，在前端有着举足轻重的地位，它到底是一种什么技术，它的过去，未来到底是什么样子，在这里做一些总结和介绍，主要介绍思路和相关示例来自于[WebAssembly for Web Developers (Google I/O ’19)](https://youtu.be/njt-Qzw0mVY)和[Rust, WebAssembly, and the future of Serverless by Steve Klabnik](https://youtu.be/CMB6AlE1QuI)
 
