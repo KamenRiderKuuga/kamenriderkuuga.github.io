@@ -17,7 +17,7 @@ tags: WebAssembly
 
 ```mermaid
 graph LR
-	HTML-->CSS-->JavaScript
+	HTML-->CSS-->JavaScript;
 ```
 
 ### JavaScript
