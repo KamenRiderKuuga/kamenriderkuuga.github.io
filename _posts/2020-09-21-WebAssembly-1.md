@@ -15,10 +15,12 @@ tags: WebAssembly
 
 要了解WebAssembly，就不得不从前端的发展史来讲起。网络的发展是非常漫长的，最开始的时候，我们有了HTML(*Tim Berners-Lee和同事Daniel W. Connolly创立于1990* )，可以显示一些静态的文档。但是我们并不满意，所以CSS(*Håkon Wium Lie创立于1994*)出现了，我们可以给网页添加一些样式。接着，我们想要用一些动作来控制网页，所以JavaScript出现了。
 
-```mermaid
+
+
+<div class="mermaid">
 graph LR
-	HTML-->CSS-->JavaScript;
-```
+	HTML-->CSS-->JavaScript
+</div>
 
 ### JavaScript
 
