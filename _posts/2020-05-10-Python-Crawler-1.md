@@ -14,7 +14,7 @@ tags: Python
 
 2.分析网页结构，来到[广西人才网](https://www.gxrc.com/)首页，如图所示，在分类中找到本次要爬取的岗位分类，都是开发类：
 
-![](\assets\gxrc_1.jpg)
+![](/assets/img/gxrc_1.jpg)
 
 点进这两个分类的，可以看到浏览器URL栏中他们的URL分别为：
 
@@ -24,7 +24,7 @@ tags: Python
 
 点击进去，可以看到如图的页面：
 
-![](\assets\gxrc_2.jpg)
+![](/assets/img/gxrc_2.jpg)
 
 可以看出，本次，我们主要需要爬取分析的就是这些岗位的标题部分，以及薪资部分，这两个分类，每个分类都有几十页，这里如何获取到每一页的URL呢，我们试着跳转到本分类的下一页，可以看到，URL变成了*https://s.gxrc.com/sJob?schType=1&expend=1&PosType=5480&page=2*
 
