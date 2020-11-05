@@ -40,3 +40,25 @@ OAuth 2.0协议只是用来做授权的协议，授权的意思就是授予各�
 | 协议 | OAuth 2.0  | OpenId Connect |
 | 含义 | 你能干什么 | 你是谁         |
 
+
+
+## 如何进行委托
+
+资源所有者(*Resource Owner*)是如何委派权限给客户端应用(*Client*)，使其访问受保护的资源(*Resource Server*)呢，在这里我们就需要一个桥梁，叫做授权服务器(*Authorization Server*)，其在物理上，可以和我们的资源服务器放到一起，但是通常，是不放在一起的，整个获取数据的过程如图：
+
+
+
+```mermaid
+sequenceDiagram;
+Client -->> Resource Owner:Authorization Request
+Resource Owner -->> Client:Authorization Grant
+Client -->> Authorization Server:Authorization Grant
+Authorization Server -->> Client:Access Token
+Client -->> Resource Server:Access Token
+Resource Server -->> Client:Protected Resource
+```
+
+流程解释：用户(*Resource Owner*)在操作客户端软件(*Client*)的时候，这个软件突然需要访问一个受保护的资源，但是应用程序没有权限，所以应用程序需要先获得这个权限。它可能有两种方式来获得这个权限，其一是从用户处直接获得权限，另外就是让授权服务器(*Authorization Server*)作为一个中介，客户端软件再间接地获得这个权限。
+
+如何获取到权限：想要使用授权服务器这个中介，客户端软件就需要把资源所有者发送到授权服务器。所谓的发送实际上就相当于一个跳转或者重定向，让资源所有者重定向到授权服务器，授权服务器通常会有一个页面，给客户端软件授权。用户被重定向到资源服务器就可以直接给客户端授权吗，其实还不可以。首先需要进行身份认证，即前面提到过的*OpenId Connect*协议做的事情
+
