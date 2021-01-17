@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue基础</title>
+
+    <style>
+        body {
+            background-color: #EEEEEE;
+        }
+
+        .input-num {
+            margin: 200px auto;
+            width: 180px;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .input-num button {
+            float: left;
+            width: 50px;
+            height: 50px;
+            border: none;
+            background-color: #393E46;
+            color: #FD7013;
+            font-size: 18px;
+        }
+
+        .input-num button:first-child {
+            border-radius: 8px 0 0 8px;
+        }
+
+        .input-num button:last-child {
+            border-radius: 0 8px 8px 0;
+        }
+
+        .input-num button:focus {
+            outline: none;
+        }
+
+        .input-num button:hover {
+            background-color: #000;
+            transition: all 1s;
+        }
+
+        .input-num span {
+            float: left;
+            display: block;
+            width: 80px;
+            background-color: #ccc;
+            text-align: center;
+        }
+    </style>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- v-text可以设置标签的内容，可以在其中用插值表达式 -->
+        <h2 v-text="message+'!'"></h2>
+        <h2 v-text="info"></h2>
+        <!-- 插值表达式 -->
+        <h2>{{message+"学习"}}</h2>
+        <!-- v-html，设置元素的innerHTML，如果设置的是文本，和v-text是一样的 -->
+        <p v-html="content"> </p>
+        <!-- v-on，为元素绑定事件 v-on:click 单击事件，v-on:mouseenter 鼠标进入事件，v-on:dblclick 双击事件-->
+        <input type="button" value="单击事件" v-on:click="doIt">
+        <input type="button" value="鼠标滑入事件" @mouseenter="doIt">
+        <input type="button" value="双击事件" @dblclick="doIt">
+        <h2 @click="changeFood"> {{food}}</h2>
+        <!-- div.input-num>button+span+button -->
+        <div class="input-num">
+            <button @click="sub">-</button>
+            <span>{{num}}</span>
+            <button @click="add">+</button>
+        </div>
+    </div>
+    <script>
+        var app = new Vue(
+            {
+                // 挂载点
+                el: "div",
+                data: {
+                    message: "Vue基础",
+                    info: "Vue基础",
+                    content: "<a href='http://www.baidu.com'>Vue基础</a>",
+                    food: "西兰花炒蛋",
+                    num: 1
+                },
+                methods: {
+                    doIt: function () {
+                        alert("OK");
+                    },
+                    changeFood: function () {
+                        // 通过this访问到定义在data的数据
+                        this.food += "好好吃！"
+                    },
+                    add: function () {
+                        if (this.num < 10) {
+                            this.num++;
+                        }
+                    },
+                    sub: function () {
+                        if (this.num > 0) {
+                            this.num--;
+                        }
+                    }
+                }
+            }
+        )
+
+        // Vue指令 v-开头
+    </script>
+</body>
+
+</html>
