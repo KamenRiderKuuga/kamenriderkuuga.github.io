@@ -1,0 +1,59 @@
+
+.case {
+    color: #333;
+}
+.case h1 {
+    color: #333;
+    margin: 20px 0;
+    padding: 5px 0;
+    /* border-bottom: 1px solid rgb(138, 138, 138); */
+}
+
+.case-area {
+    display: flex;
+    justify-content:flex-start;
+    flex-wrap:wrap;
+    text-align: center;
+}
+
+.case-box {
+    /* 每个小盒 */
+    box-sizing: border-box;
+    margin: 20px 15px;
+    padding: 20px;
+    display: block;
+    width: 250px;
+    height: 350px;
+    border-radius: 5px;
+    /* background-color: #fff; */
+    box-shadow:1px 1px 5px 2px rgb(0, 0, 0,.1);
+    text-align: center;
+    color: #333;
+}
+
+.case-box .pic{
+    /* margin: auto; */
+    width: 208px;
+    height: 208px;
+    border-radius: 5px;
+    background-color: #ccc;
+    border: 2px solid #333;
+    overflow: hidden;
+}
+
+.case-box .pic img{
+    width: 100%;
+}
+
+.case-box h3 {
+    margin:15px auto;
+}
+
+@media(max-width:960px) {
+    .case-area {
+        padding: 20px;
+    }
+    .case-box {
+        margin: 20px 30px;
+    }
+}

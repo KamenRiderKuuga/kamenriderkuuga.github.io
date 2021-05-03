@@ -1,0 +1,75 @@
+---
+layout: default
+title: "首页"
+---
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+  <div class="banner">
+    <img src="assets/images/cat.png" alt="">
+    <!-- <img src="assets/images/cat3.webp" alt="" style="display: none;"> -->
+    <h1>Welcome</h1>
+  </div>
+
+  <section class="page-content index-page">
+    <div class="wrap">
+      <div class="box info">
+        <div class="left">
+          <h2>你好，我是一名web前端设计人员</h2>
+          <p>目前居住地 中国 广东 深圳</p>
+          <p>照片上是我领养的的猫咪</p>
+          <p>这是我基于jekyll独立完成的个人网站</p>
+          <p>目前本站还在建设中</p>
+        </div>
+        <div class="pic"><img src="/assets/images/cola800.jpg" alt=""></div>
+      </div>
+      <div class="box skill">
+        <h2>专业技能</h2>
+        <p>我了解的前端知识和设计软件的熟练程度</p>
+        <div class="bottom">
+          <div class="subbox">
+            <p>HTML+CSS+JS</p>
+            <div class="cup"><span style="height: 85%;"></span></div>
+          </div>
+          <div class="subbox">
+            <p>jQuery</p>
+            <div class="cup"><span style="height: 75%;"></span></div>
+          </div>
+          <div class="subbox">
+            <p>Vue</p>
+            <div class="cup"><span style="height: 60%;"></span></div>
+          </div>
+          <div class="subbox">
+            <p>PS+AI</p>
+            <div class="cup"><span style="height: 90%;"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box post">
+        <h2>最新的博客文章</h2>
+        <ul>
+          {% for post in site.posts limit: 6 %} <li>
+            <a href="{{ post.url }}">{{ post.title }}
+
+            </a><span>
+              {{post.date| date_to_string}}
+            </span>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

@@ -1,5 +1,5 @@
 title: HANABI的技术博客
-author: 
+author:
   name: HANABI
   email: narancia86@outlook.com
 description: > # this means to ignore newlines until "show_excerpts:"
@@ -50,10 +50,4 @@ minima:
 # - about.md
 
 # Build settings
-theme: minima
 markdown: kramdown
-
-plugins:
- - jekyll-feed
- - jekyll-seo-tag
- - jekyll-sitemap
