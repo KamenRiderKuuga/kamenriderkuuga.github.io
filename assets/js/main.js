@@ -19,32 +19,15 @@ $(function () {
         });
     }
 
-    $(".nav-btn").click(function () {
-        $(this).toggleClass("rotate");
-        $("header nav").slideToggle();
-    });
-    $("header nav").click(function () {
-        $(this).hide();
-    })
-    // $('.btn-slider').click(function () {
-    //     $('.banner').slideToggle();
-    //     $(this).css("buttom", "-30")
-    // });
+    var navToolBar = $("header nav");
 
-    // setInterval(() => {
-    //     $(".banner img").each(function () {
-    //         $(this).fadeToggle(1000);
-    //     });
-    // }, 5000);
-
-
-    // console.log(111);
-    // window.addEventListener('scroll', function () {
-    //     let t = $('body, html').scrollTop();   // 目前监听的是整个body的滚动条距离
-    //     if (t > 0) {
-    //         $('header').addClass('header-active')
-    //     } else {
-    //         $('header').removeClass('header-active')
-    //     }
-    // })
+    if (navToolBar.css("position") == "absolute") {
+        $(".nav-btn").click(function () {
+            $(this).toggleClass("rotate");
+            navToolBar.slideToggle();
+        });
+        navToolBar.click(function () {
+            $(this).hide();
+        })
+    }
 });
