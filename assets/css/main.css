@@ -162,6 +162,10 @@ header nav a:hover {
   width: 1140px;
 }
 
+.wrap p,.wrap li{
+  line-height:23px;
+}
+
 .page-content {
   flex: 1 0 auto;
 }
