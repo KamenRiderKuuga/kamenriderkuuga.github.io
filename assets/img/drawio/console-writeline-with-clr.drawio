@@ -1,0 +1,19 @@
+<mxfile>
+    <diagram id="aKhLOf0NijCGZtTnlOJF" name="第 1 页">
+        <mxGraphModel dx="933" dy="1844" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="托管程序：在Main函数中调用了&lt;i&gt;Console.WriteLine(&quot;Hello&quot;)&lt;/i&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="-550" width="180" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="5" target="2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;i&gt;在Main函数执行之前，CLR检测出Main的代码引用的所有类型，并且分配一个内部数据结构来管理对引用类型的访问。比如这里，很显然 ，引用了Console类型，所以其分配了一个内部结构，其为每个Console类型定义的方法都保存了一个记录项（这里可以理解成一个指针）&lt;/i&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="30" y="-830" width="220" height="160" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
