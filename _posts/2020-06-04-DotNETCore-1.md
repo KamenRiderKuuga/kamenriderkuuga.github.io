@@ -13,7 +13,7 @@ tags: [.NET Core]
 
 ### 1.双击之后一闪而过
 
-这个是在Windows中使用的时候出现的，双击*nginx.exe*之后一闪而过，打开任务管理器也没有相关进程，在浏览器中输入*localhost*也无法访问欢迎页面，检查之后才知道是因为niginx的所在路径存在中文，换了没有中文的路径之后启动，没有出现此问题
+这个是在Windows中使用的时候出现的，双击*nginx.exe*之后一闪而过，打开任务管理器也没有相关进程，在浏览器中输入*localhost*也无法访问欢迎页面，检查之后才知道是因为nginx所在路径存在中文，换了没有中文的路径之后启动，没有出现此问题
 
 ### 2.配置vue项目后刷新后出现404的问题
 根据[官方文档](https://router.vuejs.org/zh/guide/essentials/history-mode.html#%E5%90%8E%E7%AB%AF%E9%85%8D%E7%BD%AE%E4%BE%8B%E5%AD%90
