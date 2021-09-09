@@ -44,7 +44,7 @@ location /api {
 
 1. 安装 [IIS UrlRewrite](https://www.iis.net/downloads/microsoft/url-rewrite)
 2. 在你的网站根目录中创建一个 `web.config` 文件，内容如下：
-```
+<!-- ```
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
   <system.webServer>
@@ -62,7 +62,7 @@ location /api {
     </rewrite>
   </system.webServer>
 </configuration>
-```
+``` -->
 
 ### 2.解决访问后端API时的跨域问题
 
