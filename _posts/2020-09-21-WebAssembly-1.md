@@ -17,10 +17,10 @@ tags: WebAssembly
 
 
 
-<div class="mermaid">
+```mermaid
 graph LR
 	HTML-->CSS-->JavaScript
-</div>
+```
 
 ### JavaScript
 
