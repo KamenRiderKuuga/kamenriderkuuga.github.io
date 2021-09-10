@@ -5,6 +5,7 @@ date: 2020-09-21
 author: HANABI
 color: rgb(54,59,64)
 tags: WebAssembly
+mermaid: true
 ---
 
 > WebAssembly作为新的前端标准之一，在前端有着举足轻重的地位，它到底是一种什么技术，它的过去，未来到底是什么样子，在这里做一些总结和介绍，主要介绍思路和相关示例来自于[WebAssembly for Web Developers (Google I/O ’19)](https://youtu.be/njt-Qzw0mVY)和[Rust, WebAssembly, and the future of Serverless by Steve Klabnik](https://youtu.be/CMB6AlE1QuI)
