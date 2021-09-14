@@ -14,7 +14,7 @@ tabs:
   categories: 分类
   tags: 标签
   archives: 归档
-  about: 关于
+  todo: 待办
 
 # text displayed in the search bar
 search:

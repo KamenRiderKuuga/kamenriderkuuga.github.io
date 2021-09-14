@@ -14,7 +14,7 @@ tabs:
   categories: Categories
   tags: Tags
   archives: Archives
-  about: About
+  todo: Todo
 
 # text displayed in the search bar
 search:
