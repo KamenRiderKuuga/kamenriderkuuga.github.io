@@ -5,6 +5,7 @@ date: 2020-06-04
 author: HANABI
 color: rgb(35,169,242)
 tags: [.NET Core]
+category: [编程框架, ASP.NET Core]
 ---
 
 > 这里记录一些在部署项目过程中容易忘记的点，主要做备忘用

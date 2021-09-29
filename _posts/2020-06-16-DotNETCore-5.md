@@ -5,6 +5,7 @@ date: 2020-06-16
 author: HANABI
 color: rgb(91,47,107)
 tags: [.NET Core]
+category: [编程框架, ASP.NET Core]
 ---
 
 > 建立好数据库，注入了ORM相关类之后，就开始构建我们通过ORM和数据库进行交互的层（*Repository*层）和只负责调用仓储层的(*Service*层)

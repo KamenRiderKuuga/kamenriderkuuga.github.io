@@ -5,6 +5,7 @@ date: 2020-05-15
 author: HANABI
 color: rgb(38,29,69)
 tags: Python
+category: [经验技巧, 爬虫]
 ---
 > 最近刚学习了Python的语法，迫不及待想做自己的第一个爬虫了，这里记录自己编写一个简单的爬虫程序爬取广西人才网的过程
 

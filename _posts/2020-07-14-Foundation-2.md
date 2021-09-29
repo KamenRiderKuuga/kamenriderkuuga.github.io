@@ -4,7 +4,8 @@ title: '数据库系统(1) - 辅助存储管理'
 date: 2020-07-14
 author: HANABI
 color: rgb(54,59,64)
-tags: 地基系列 DBMS
+tags: 编程基础 DBMS
+category: [编程基础, 关系型数据库]
 ---
 
 > 整理数据库系统(主要是关系数据库系统[^1])学习过程中的相关知识点，主要学习书籍：[数据库系统实现](https://book.douban.com/subject/4838430/)

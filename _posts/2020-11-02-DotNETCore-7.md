@@ -6,6 +6,7 @@ author: HANABI
 color: rgb(54,59,64)
 tags: [.NET Core]
 mermaid: true
+category: [编程框架, ASP.NET Core]
 ---
 
 > 学习.NET Core权限认证相关知识，看的是杨旭老师在B站上的教程，先开始了解OAuth 2.0协议

@@ -5,6 +5,7 @@ date: 2020-06-12
 author: HANABI
 color: rgb(91,47,107)
 tags: [.NET Core]
+category: [编程框架, ASP.NET Core]
 ---
 
 > 在前后端分离过程中,API文档是非常重要的,在项目搭建的第一步,我们使用Swagger来实现这一点

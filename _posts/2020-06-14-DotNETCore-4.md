@@ -5,6 +5,7 @@ date: 2020-06-14
 author: HANABI
 color: rgb(91,47,107)
 tags: [.NET Core]
+category: [编程框架, ASP.NET Core]
 ---
 
 > 经过之前的步骤，已经设置好了配置文件的读取方法，现在让我们来设置ORM，这里我们选用[SqlSugar](https://github.com/sunkaixuan/SqlSugar)作为本项目的ORM

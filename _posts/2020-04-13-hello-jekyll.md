@@ -6,6 +6,7 @@ author: HANABI
 color: rgb(255,210,32)
 cover: '../assets/test.png'
 tags: Jekyll
+category: [Jekyll相关]
 ---
 # Welcome to my blog
 

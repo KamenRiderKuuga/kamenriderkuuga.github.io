@@ -5,6 +5,7 @@ date: 2020-05-17
 author: HANABI
 color: rgb(228,210,196)
 tags: Python
+category: [经验技巧, 爬虫]
 ---
 > 经过之前的爬取，已经了解了网页的爬取流程，现在来了解异步爬取
 
