@@ -28,7 +28,7 @@ description: >- # used by seo meta and the atom feed
 url: "https://lambda.cyou/"
 
 github:
-  username: GadHao # change to your github username
+  username: KamenRiderKuuga # change to your github username
 
 twitter:
   username: twitter_username # change to your twitter username
@@ -41,7 +41,7 @@ social:
   links:
     # The first element serves as the copyright owner's link
     # - https://twitter.com/username      # change to your twitter homepage
-    - https://github.com/GadHao # change to your github homepage
+    - https://github.com/KamenRiderKuuga # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username

@@ -14,7 +14,7 @@ tabs:
   categories: Categories
   tags: Tags
   archives: Archives
-  todo: Todo
+  read: Read
 
 # text displayed in the search bar
 search:
