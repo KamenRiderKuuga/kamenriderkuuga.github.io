@@ -1,6 +1,6 @@
 ---
 title: 札记
-icon: fas book-reader
+icon: fas fa-book-reader
 order: 4
 ---
 
