@@ -1,0 +1,58 @@
+/* 盒模型相关内容 */
+
+div#box {
+    padding: 200px;
+    /* 后面设置的内边距，会覆盖掉之前设置的 */
+    padding-top: 100px;
+    padding-bottom: 100px;
+    /* 使用百分比设置margin时，是用其父容器的宽度的百分比，比如这里，是body宽度的百分之10 */
+    margin: 10%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    /* 利用背景色的反差，以及边框线条的形状，使整个元素周围出现锯齿 */
+    background-color: pink;
+    border-color: white;
+    border-style: dashed;
+    border-width: thick;
+    /* 设置容器周边为圆角 */
+    border-radius: 100px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    /* 将字体大小设定为父容器中同种元素字体大小的1.5倍 */
+    font-size: 1.5em;
+    /* 设置文本居中 */
+    text-align: center;
+}
+
+/* div与span的使用，一些属性的快捷写法,伪类的使用 */
+
+/* div的所有子孙<p>元素的样式 */
+
+div p {
+    /* 边距的快捷写法，从上开始顺时针，也就是上，右，下，左的顺序 */
+    margin: 0px 100px 0px 100px;
+    /* 或者像这样，代表上下，左右 */
+    padding: 0px 30px;
+}
+
+span.important {
+    font-weight: bold;
+}
+
+/* 光标悬停 */
+
+div a:hover {
+    background-color: brown;
+}
+
+/* 未访问的链接 */
+
+div a:link {
+    background-color: lightskyblue;
+}
+
+/* 已访问的链接 */
+
+div a:link {
+    background-color: deeppink;
+}

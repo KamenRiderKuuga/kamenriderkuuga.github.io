@@ -1,0 +1,61 @@
+<mxfile host="app.diagrams.net" modified="2023-05-02T15:46:43.064Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36 Edg/112.0.1722.64" etag="4xq-idk3xB7lYVcwEfRb" version="21.2.4" type="device">
+  <diagram id="6a731a19-8d31-9384-78a2-239565b7b9f0" name="Page-1">
+    <mxGraphModel dx="1434" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JDasLL7qzu_PNTP1bfIw-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="JDasLL7qzu_PNTP1bfIw-1" target="JDasLL7qzu_PNTP1bfIw-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="494" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JDasLL7qzu_PNTP1bfIw-1" value="开始处理" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="349" y="130" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JDasLL7qzu_PNTP1bfIw-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JDasLL7qzu_PNTP1bfIw-14" target="JDasLL7qzu_PNTP1bfIw-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JDasLL7qzu_PNTP1bfIw-14" value="计算HASH值（XXH32）" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="349" y="270" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JDasLL7qzu_PNTP1bfIw-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JDasLL7qzu_PNTP1bfIw-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="464" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JDasLL7qzu_PNTP1bfIw-17" value="转换为62进制" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="349" y="400" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JDasLL7qzu_PNTP1bfIw-34" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JDasLL7qzu_PNTP1bfIw-25" target="JDasLL7qzu_PNTP1bfIw-33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JDasLL7qzu_PNTP1bfIw-40" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="JDasLL7qzu_PNTP1bfIw-25" target="JDasLL7qzu_PNTP1bfIw-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="JDasLL7qzu_PNTP1bfIw-25" value="查询是否含有此键（FASTER）" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="344" y="520" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JDasLL7qzu_PNTP1bfIw-33" value="存储（62进制短码与初始长链）" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="349" y="660" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JDasLL7qzu_PNTP1bfIw-35" value="N" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="464" y="598" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JDasLL7qzu_PNTP1bfIw-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="JDasLL7qzu_PNTP1bfIw-39" target="JDasLL7qzu_PNTP1bfIw-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="839" y="170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="840" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JDasLL7qzu_PNTP1bfIw-39" value="追加自定义字符串" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="724" y="530" width="230" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JDasLL7qzu_PNTP1bfIw-42" value="Y" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="634" y="528" width="30" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

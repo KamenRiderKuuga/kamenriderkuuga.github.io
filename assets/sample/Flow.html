@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流(Flow)在HTML中的体现</title>
+    <style>
+        blockquote {
+            color: #828282;
+            border-left: 4px solid #e8e8e8;
+            padding-left: 15px;
+            font-size: 18px;
+            letter-spacing: -1px;
+            font-style: italic
+        }      
+    </style>
+</head>
+
+<body>
+    <h1>流(Flow)在HTML中的体现</h1>
+    <h2>块元素中的流</h2>
+    <blockquote>块元素在页面从上到下逐个显示，每两个元素之间默认添加一个空格，这就是流在块元素中的体现</blockquote>
+    <p>这是第一段</p>
+    <p>这是第二段</p>
+    <p>这是第三段</p>
+    <h2>内联元素中的流</h2>
+    <blockquote>内联元素总体的流向是从左上方流向右下方</blockquote>
+    <p>这一段文字中的<em>内联元素</em>相互挨着摆放，当<a href="">页面变窄，一行不够容纳其内容时，其自动换行到下一行</a></p>
+    <h2 id="innerElement">用一些内联元素Span，拖动浏览器，可以更直观体现出流在内联元素中的效果</h2>
+    <div id='spanContainer'></div>
+</body>
+<script>
+    window.onload = function () {
+        let elementContainer = document.getElementById("spanContainer");
+        for (let num = 0; num <= 100; num++) {
+            var newspan = document.createElement("span");
+            let color = getRandomColor();
+            newspan.style.backgroundColor = color;
+            newspan.style.padding = '0% 2%';
+            newspan.innerHTML = `颜色:${color}`;
+            elementContainer.append(newspan);
+        }
+    }
+    // 生成随机颜色
+    function getRandomColor() {
+        let randomArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+        let colorStr = "#";
+        //产生一个六位的字符串
+        for (var i = 0; i < 6; i++) {
+            //15是范围上限，0是范围下限，两个函数保证产生出来的随机数是整数
+            colorStr += randomArr[Math.ceil(Math.random() * randomArr.length - 1)];
+        }
+        return colorStr;
+    }
+</script>
+
+</html>

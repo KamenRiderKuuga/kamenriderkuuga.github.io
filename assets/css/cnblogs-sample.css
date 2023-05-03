@@ -1,0 +1,74 @@
+div.pagehead {
+    background-color: #7d8b8d;
+}
+
+nav>ul {
+    font-size: large;
+    padding-left: 10px;
+    background-color: rgb(22, 159, 230);
+    height: 60px;
+}
+
+#maincontent {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#main {
+    background-color: aqua;
+    margin-right: 120px;
+}
+
+aside {
+    width: 100px;
+    float: right;
+}
+
+/* 这里对较窄的屏幕做了特殊处理，像博客园一样把侧边栏移到下面去了 */
+
+@media screen and (max-device-width:800px) {
+    #maincontent {
+        width: 90vw;
+        display: flex;
+        flex-flow: column;
+    }
+    aside {
+        float: none;
+        order: 2;
+    }
+    #main {
+        order: 1;
+        margin-right: 0px;
+    }
+}
+
+#sidebarOne {
+    margin: 20px 0px;
+    background-color: coral;
+}
+
+#sidebarTwo {
+    margin: 20px 0px;
+    background-color: pink;
+}
+
+#topbar>ul>li {
+    display: inline-block;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+#footer {
+    background-color: powderblue;
+    clear: right;
+}
+
+#rocket {
+    position: fixed;
+    width: 50px;
+    height: 100px;
+    right: 30px;
+    bottom: 30px;
+    background-color: gray;
+}

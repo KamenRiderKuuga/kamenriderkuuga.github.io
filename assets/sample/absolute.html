@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>absolute</title>
+    <style>
+        #maincontent {
+            background-color: cyan;
+        }
+
+        #fixeddiv {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 100px;
+            height: 100px;
+            background-color: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="maincontent">
+        <p>为了展示什么是绝对定位，我们在这里添加一些文字，拖动观察可以发现，绝对定位的元素会直接遮挡住文字，也就是说内联元素不会在其周围浮动</p>
+    </div>
+    <div id="newdivs"></div>
+    <div id="fixeddiv"><p style="margin-top: 0px; margin-bottom: 0px;">固定定位，其位置相对浏览器窗口边界固定</p></div>
+</body>
+<script>
+    window.onload = () => {
+        let elementnewdivs = document.getElementById('newdivs');
+        // 生成10个绝对定位的方块，置于屏幕右上角
+        for (let num = 0; num <= 10; num++) {
+            let newdiv = document.createElement("div");
+            newdiv.style.position = 'absolute';
+            newdiv.style.top = `${num * 10}px`;
+            newdiv.style.right = `${num * 10}px`;
+            newdiv.style.width = "100px";
+            newdiv.style.height = "100px";
+            newdiv.style.backgroundColor = getRandomColor();
+            newdiv.style.zIndex = '1';
+            newdiv.innerHTML = `z-index:${num}`
+            elementnewdivs.append(newdiv);
+        }
+    }
+
+    // 生成随机颜色
+    function getRandomColor() {
+        let randomArr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'];
+        let colorStr = "#";
+        //产生一个六位的字符串
+        for (var i = 0; i < 6; i++) {
+            //15是范围上限，0是范围下限，两个函数保证产生出来的随机数是整数
+            colorStr += randomArr[Math.ceil(Math.random() * randomArr.length - 1)];
+        }
+        return colorStr;
+    }
+</script>
+
+</html>

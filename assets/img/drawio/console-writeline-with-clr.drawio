@@ -1,0 +1,69 @@
+<mxfile>
+    <diagram id="aKhLOf0NijCGZtTnlOJF" name="第 1 页">
+        <mxGraphModel dx="615" dy="1775" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="托管程序：在Main函数中调用了&lt;i&gt;Console.WriteLine(&quot;Hello&quot;)&lt;/i&gt;" style="whiteSpace=wrap;html=1;rounded=1;" parent="1" vertex="1">
+                    <mxGeometry x="50" y="-550" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;i&gt;在Main函数执行之前，CLR检测出Main函数引用了Console类，分配一个内部数据结构来管理对引用类型的访问。其为每个Console类型定义的方法都保存了一个记录项（这里可以理解成一个指针）&lt;/i&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="30" y="-830" width="220" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;b&gt;Console&lt;/b&gt;&lt;br&gt;&lt;i&gt;static void WriteLine()&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/i&gt;&lt;i&gt;static void WriteLine(string)&lt;br&gt;&lt;/i&gt;&lt;i&gt;&lt;br&gt;&lt;br&gt;&lt;/i&gt;&lt;i&gt;（其余成员）&lt;br&gt;&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=top;" vertex="1" parent="1">
+                    <mxGeometry x="340" y="-590" width="206" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;i&gt;JITCompiler&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="383" y="-550" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;curved=1;" edge="1" parent="1" source="9">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="279" y="-363" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="443" y="-480"/>
+                            <mxPoint x="279" y="-480"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="9" value="&lt;i&gt;JITCompiler&lt;/i&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="383" y="-510" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="..." style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="383" y="-470" width="120" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="&lt;i&gt;在这个结构初始化时，CLR将每个记录项都指向包含在CLR内部的一个未编档函数，这里将其这个函数称为JITCompiler&lt;br&gt;&lt;/i&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+                    <mxGeometry x="326" y="-830" width="220" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="16" target="24">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="whiteSpace=wrap;html=1;rounded=1;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="50" y="-360" width="490" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="whiteSpace=wrap;html=1;rounded=0;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="80" y="-330" width="430" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;b&gt;MSCorEE.dll&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="275" y="-356" width="40" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="&lt;i&gt;JITCompiler 函数&amp;nbsp; &amp;nbsp; &amp;nbsp;{&lt;br&gt;&lt;br&gt;1.在负责实现类型(Console)的程序集的元数据中查找被调用的方法WriteLine(string)&lt;br&gt;&lt;br&gt;2.获取该方法的IL&lt;br&gt;&lt;br&gt;3.分配内存块&lt;br&gt;&lt;br&gt;4.将IL编译成本机CPU指令，将这些本机CPU指令存储到步骤3分配的内存中&lt;br&gt;&lt;br&gt;5.在Type表中修改与方法对应的条目，使其指向步骤3分配的内存块&lt;br&gt;&lt;br&gt;6.跳转到内存块中的本机代码&lt;br&gt;&lt;br&gt;}&lt;/i&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="-310" width="390" height="220" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.556;entryY=0.013;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="24" target="2">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="710" y="-660"/>
+                            <mxPoint x="150" y="-660"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="24" value="本机CPU指令" style="rounded=1;whiteSpace=wrap;html=1;align=center;" vertex="1" parent="1">
+                    <mxGeometry x="650" y="-540" width="120" height="60" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

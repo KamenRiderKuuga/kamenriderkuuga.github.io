@@ -1,0 +1,78 @@
+/* 开始学习CSS，字体和颜色样式相关内容 */
+
+/* 引入字体文件，并考虑浏览器兼容性 */
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu/Ubuntu.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/Ubuntu/Ubuntu.eot?#iefix') format('embedded-opentype'), url('../fonts/Ubuntu/Ubuntu.woff2') format('woff2'), url('../fonts/Ubuntu/Ubuntu.woff') format('woff'), /* Modern Browsers */
+    url('../fonts/Ubuntu/Ubuntu.ttf') format('truetype'), /* Safari, Android, iOS */
+    url('../fonts/Ubuntu/Ubuntu.svg#Ubuntu') format('svg');
+    /* Legacy iOS */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 全局字体颜色 */
+
+body {
+    /* 大小分为xx-small,x-small,samll,medium,large,x-large,xx-large */
+    font-size: large;
+    color: blue;
+}
+
+.redclass {
+    background-color: aqua;
+}
+
+/* 这里的设置比body的更精确，所以这里的样式会覆盖body的样式 */
+
+h2.redclass {
+    color: coral;
+}
+
+/* 设置h1，以及body直属的h2的样式 */
+
+h1, body>h2 {
+    /* 设置字体 */
+    font-family: 'Ubuntu';
+    /* 设置黑色的下边框 */
+    border-bottom: 1px solid black;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+h2 {
+    font-size: 100%;
+}
+
+p {
+    font-size: 80%;
+}
+
+/* 单独设置斜体部分的样式 */
+
+em {
+    font-weight: bold;
+    background-color: rgb(240, 255, 255);
+    text-decoration: underline black;
+}
+
+/* 当一个元素同时属于几种类时，会按照顺序展示最后一种的样式 */
+
+.yellowclass {
+    color: yellow;
+    background-color: yellow;
+}
+
+.blackclass {
+    color: black;
+    background-color: black;
+}
+
+.pinkclass {
+    background-color: pink;
+}
