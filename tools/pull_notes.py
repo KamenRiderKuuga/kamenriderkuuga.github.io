@@ -91,6 +91,12 @@ def replace_content_and_copy_assets(file, content, new_file_name):
         pattern = re.compile(rf"!\[\[{excalidraw}\|.*?\]\]")
         content = re.sub(pattern, f"![]({img_path}/{new_excalidraw_svg})", content)
 
+    # replace the ```erlang with {% highlight erlang %} and {% endhighlight %}
+    if "```erlang" in content:
+        # Use regex to find erlang code blocks and add {% raw %} and {% endraw %}
+        erlang_pattern = re.compile(r"```erlang(.*?)```", re.S)
+        content = erlang_pattern.sub(r"```erlang\n{% raw %}\1{% endraw %}\n```", content)
+
     return content
 
 
