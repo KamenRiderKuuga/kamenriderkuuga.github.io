@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float</title>
+    <style>
+        p.floatclass {
+            background-color: aqua;
+        }
+
+        blockquote {
+            color: #828282;
+            border-left: 4px solid #e8e8e8;
+            padding-left: 15px;
+            font-size: 18px;
+            letter-spacing: -1px;
+            font-style: italic
+        }
+
+        #allcontent {
+            width: 800px;
+            background-color: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>使用float浮动元素</h1>
+    <h2>先观察不浮动的情况</h2>
+    <p class="floatclass"></p>
+    <p class="fixedclass"></p>
+    <h2>为将要浮动的元素设置一个宽度，让其不是占据整行</h2>
+    <p class="floatclass" style="width: 100px;"></p>
+    <p class="fixedclass"></p>
+    <h2>使用float属性让其浮动到右边</h2>
+    <p class="floatclass" style="width: 100px; float: right; margin: 0px;"></p>
+    <p class="fixedclass"></p>
+    <blockquote>
+        总结：当一个元素浮动之后，其会从正常的流中被忽略，块级元素会直接穿过它，不会进行换行，但是内联元素在遇到它时会围绕着它进行布局，值得注意的是，这里浮动的元素是写在不动的段落之前的，但是从视觉上来看，其是在它之后的，这是我们设置其靠右浮动的缘故
+    </blockquote>
+    </p>
+    <h2>让左边段落，和右边的文章完全分为两栏，而不是底部超出环绕</h2>
+    <p class="floatclass" id="longElement" style="width: 100px; float: right; margin: 0px;"></p>
+    <div style="margin: 0px 120px 0px 0px;">
+        <p class="fixedclass"></p>
+        <blockquote style="background-color: coral;">
+            可以看到，我们通过设置固定区域的右外边距，来让这两个区域完全被划分开，顺便通过这个举动，让边界更加分明</blockquote>
+    </div>
+    <div style="border:solid 1px; background-color: pink;">
+        这个块元素被右边的浮动元素遮挡住了，因为它完全无视浮动元素的存在，我们来解决这个问题
+    </div>
+    <div style="border:solid 1px; background-color: pink; clear:right;">
+        通过设置clear属性，我们让这个元素的右边不允许有浮动内容，元素就自动被放置到浮动内容下方了
+    </div>
+    <h2>冻结布局</h2>
+    <div id="allcontent">
+        <p class="floatclass" style="float: right; width: 200px;"></p>
+        <p class="fixedclass" style="margin-right: 210px;"></p>
+        <blockquote>可以看到，无论浏览器怎么调整，这两个区域的大小都固定不变</blockquote>
+    </div>
+    <h2>凝胶布局</h2>
+    <div id="allcontent" style="margin-left: auto; margin-right: auto;">
+        <p class="floatclass" style="float: right; width: 200px;"></p>
+        <p class="fixedclass" style="margin-right: 210px;"></p>
+        <blockquote>凝胶布局在冻结布局的基础上设置了左右外边距为auto，其依然锁定页面中内容区的宽度，不过会将它在浏览器中居中</blockquote>
+    </div>
+</body>
+<script>
+    window.onload = () => {
+        let floatElements = document.getElementsByClassName("floatclass");
+        for (let index = 0; index < floatElements.length; index++) {
+            const element = floatElements[index];
+            element.innerHTML = `这是一个段落，我们将其背景设置为青色,用它来展示float的过程`;
+            if (element.id == 'longElement') {
+                element.innerHTML = element.innerHTML + '变长'.repeat(30);
+            }
+        }
+        let fixedElements = document.getElementsByClassName("fixedclass");
+        for (let index = 0; index < fixedElements.length; index++) {
+            const element = fixedElements[index];
+            element.innerHTML = `这是一个不动的段落，我们让它尽可能${'长'.repeat(200)}，从而让其内容环绕在浮动的元素周围`;
+        }
+    }
+</script>
+
+</html>

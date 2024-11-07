@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+<style>
+    div#tableContainer {
+        display: table;
+        /* 为表格中的单元格增加10像素的边框间距，可以看作是其中元素的外边距 */
+        border-spacing: 10px;
+    }
+
+    div#tableRow {
+        display: table-row;
+    }
+
+    div#main {
+        display: table-cell;
+        background-color: aqua;
+    }
+
+    div.sidebar {
+        display: table-cell;
+        width: 200px;
+        background-color: coral;
+    }
+</style>
+
+<body>
+    <div id="tableContainer">
+        <div id="tableRow">
+            <div class="sidebar"></div>
+            <div id="main"></div>
+            <div class="sidebar"></div>
+        </div>
+    </div>
+</body>
+<script>
+    window.onload = () => {
+        let maindiv = document.getElementById("main");
+        let sidebardiv= document.getElementsByClassName("sidebar");
+        for (let index = 0; index < sidebardiv.length; index++) {
+            const element = sidebardiv[index];
+            element.innerHTML = `${'页面侧边栏'.repeat(100)}`
+        }
+        maindiv.innerHTML = `${'这是页面主体内容'.repeat(100)}`
+    }
+</script>
+
+</html>
